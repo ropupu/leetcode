@@ -26,7 +26,6 @@ public:
             tree->right = handle(inorder, postorder, rootPosition + 1, inorderEnd, postorderEnd - 1 - rightLength, postorderEnd - 1);
         }
         if (rootPosition > inorderStart) {
-            int leftLength = rootPosition - inorderStart;
             tree->left = handle(inorder, postorder, inorderStart, rootPosition - 1,  postorderEnd - rightLength - 1 - leftLength,postorderEnd - rightLength - 1);
         }
         return tree;
